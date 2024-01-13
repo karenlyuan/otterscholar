@@ -4,7 +4,7 @@ import random
 attempts = 0
 coins = 0
 
-class Game:
+class Game1:
     def __init__(self):
         global attempts
 
@@ -91,7 +91,7 @@ task_list.print_tasks()
 
 print(coins)
 
-game = Game()
+game = Game1()
 game.rules()
 game.roll()
 game.roll()
