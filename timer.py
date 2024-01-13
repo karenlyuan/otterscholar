@@ -2,35 +2,36 @@ import time
 
 class Timer:
     def __init__(self):
-        preference = input("Would you like to use the pomodoro method or set a custom timer?")
-        timer_work = 0
-        timer_break = 0
-        timer_complete = False
-        attempts = 0
+        self.timer_work = 0.0
+        self.timer_break = 0.0
+        self.timer_complete = False
+        self.attempts = 0
 
     def set_timer(self, preference):
         while preference != "pomodoro" and preference != "custom":
             preference = input("Please type either 'pomodoro' or 'custom'")
 
+        #Right now the timer is in seconds instead of minutes(I did that for testing)
+        #When we implement it we can just multiple the number by 60 to turn it into minutes
         if preference == "pomodoro":
-            timer_work = 25
-            timer_break = 5
+            self.timer_work = 25.0
+            self.timer_break = 5.0
 
         if preference == "custom":
-            timer_work = input("How long would you like to work for?")
-            timer_break = input("How long would you like to take a break for?")
+            self.timer_work = float(input("How long would you like to work for?"))
+            self.timer_break = float(input("How long would you like to take a break for?"))
 
-    def start_time(self, timer_work, timer_break):
+    def start_time(self):
         time.time()
         print("Time to starting working!")
-        time.sleep(timer_work)
+        time.sleep(self.timer_work)
         time.time()
         print("Time for your break! Good job, you earned it!")
-        time.sleep(timer_break)
+        time.sleep(self.timer_break)
         time.time()
 
     def finish_timer(self):
-        timer_complete = True
+        self.timer_complete = True
 
     def more_attempts(self, num):
-        attempts += num
+        self.attempts += num

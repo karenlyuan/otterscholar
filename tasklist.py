@@ -32,6 +32,9 @@ class Game1:
                 print("3 coins!")
         else:
             print("Not enough attempts, finish tasks to get more")
+    def print_coins(self):
+        global coins
+        print(coins)
 
 class Task:
     def __init__(self, time, task_des):
@@ -62,7 +65,7 @@ class TaskList:
         else:
             print("No tasks found.")
 
-task_list = TaskList()
+"""task_list = TaskList()
 
 tdescription = input("What do you want to do? ")
 task_list.add_task(tdescription)
@@ -96,4 +99,4 @@ game.rules()
 game.roll()
 game.roll()
 
-print(coins)
+print(coins)"""

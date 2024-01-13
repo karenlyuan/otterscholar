@@ -3,11 +3,12 @@ from tasklist import Game1, Task, TaskList
 import time
 
 t1 = Timer()
-t1.set_timer
-t1.start_time
-t1.finish_timer
+t = input("Would you like the pomodero timer or a custom timer?")
+t1.set_timer(t)
+t1.start_time()
+t1.finish_timer()
 
-if t1.finish_timer:
+if t1.finish_timer():
     t1.more_attempts(1)
 
 task_list = TaskList()
@@ -37,11 +38,10 @@ task_list.print_tasks()
 #else:
  #   print("Task 'Do another thing' not found")
 
-print(coins)
-
 game = Game1()
 game.rules()
+game.print_coins()
 game.roll()
 game.roll()
 
-print(coins)
+game.print_coins()
