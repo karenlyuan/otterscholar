@@ -4,65 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Webpage Title</title>
-    <style>
-        body {
-            background-color: #EDE8FA;
-        }
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #0A014F;
-            color: #FAF7F7;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+    <link rel="stylesheet" href="styles.css">
 
-            position: absolute;
-            left: 392px;
-            top: 144px;
-            width: 218px;
-            height: 75px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            border-radius: 30px;
-            text-align: center;
-            font-size: 25px;
-            font-family: Inria Sans;
-            font-weight: 700;
-            word-wrap: break-word;
-
-        }
-
-        
-        button:hover {
-            background-color: #8C1C13;
-        }
-
-    </style>
 </head>
 <body>
 
     <div>    
-        <div style="width: 218px; height: 76px; left: 636px; top: 143px; position: absolute">
-            <div style="width: 218px; height: 76px; left: 0px; top: 0px; position: absolute; background: #0A014F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-            <div style="width: 218px; height: 24px; left: 0px; top: 26px; position: absolute; text-align: center; color: #FAF7F7; font-size: 25px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Custom Timer</div>
-        </div>
-        <div style="width: 218px; height: 75px; left: 57px; top: 612px; position: absolute">
-            <div style="width: 218px; height: 75px; left: 0px; top: 0px; position: absolute; background: #0A014F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-            <div style="width: 214px; left: 2px; top: 21px; position: absolute; text-align: center; color: #FAF7F7; font-size: 25px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Select Music</div>
-        </div>
-        <div style="width: 218px; height: 76px; left: 57px; top: 714px; position: absolute; background: #0A014F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-        <div style="width: 214px; height: 37px; left: 59px; top: 733px; position: absolute; text-align: center; color: #FAF7F7; font-size: 25px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Mini Games</div>
-        <div style="width: 218px; height: 76px; left: 59px; top: 346px; position: absolute; background: #0A014F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-        <div style="left: 133px; top: 369px; position: absolute; text-align: center; color: #FAF7F7; font-size: 25px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Finish</div>
-        
-        <!--
-            <div style="width: 218px; height: 75px; left: 0px; top: 0px; position: absolute; background: #0A014F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-            <div style="width: 218px; height: 26px; left: 0px; top: 23px; position: absolute; text-align: center; color: #FAF7F7; font-size: 25px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Pomodoro</div>
-        -->
 
-        <div style="width: 218px; height: 76px; left: 59px; top: 243px; position: absolute; background: #0A014F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-        <div style="width: 162px; height: 29px; left: 87px; top: 267px; position: absolute; text-align: center; color: white; font-size: 25px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Example Task</div>
         <div style="width: 475px; height: 784px; left: 974px; top: 101px; position: absolute; background: #FFF9FA; border-top-left-radius: 30px; border-top-right-radius: 30px"></div>
         <div style="width: 232px; height: 23px; left: 60px; top: 91px; position: absolute; color: #0A014F; font-size: 15px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Coins: 0                  <br/>Attempts left: 0</div>
         <div style="width: 475px; height: 79px; left: 974px; top: 90px; position: absolute; background: #8C1C13; border-top-left-radius: 30px; border-top-right-radius: 30px"></div>
@@ -159,7 +108,12 @@
             }
         </script>
 
-        <button onclick="runPythonScript()">Pomodoro</button>
+        <button id="button_pomodoro" onclick="runPythonScript()">Pomodoro</button>
+        <button id="button_timer" onclick="runPythonScript()">Custom Timer</button>
+        <button id="button_music" onclick="runPythonScript()">Select Music</button>
+        <button id="button_mini_game" onclick="runPythonScript()">Mini Games</button>
+        <button id="button_finish" onclick="runPythonScript()">Finish</button>
+        <button id="button_task" onclick="runPythonScript()">Example Task</button>
     
     </div>
 
