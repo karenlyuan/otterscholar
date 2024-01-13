@@ -1,4 +1,3 @@
-#music: Royalty Free Music: Bensound.com/royalty-free-music License code: RMPVK8DHCTPQJMFL
 from timer import Timer
 from tasklist import Game1, Task, TaskList
 import pygame
@@ -9,7 +8,7 @@ pygame.init()
 pygame.mixer.music.load(file_path)
 pygame.mixer.music.play()
 t1 = Timer()
-t = input("Would you like the pomodero timer or a custom timer?")
+t = input("Would you like the pomodero timer or a custom timer? ")
 t1.set_timer(t)
 t1.start_time()
 t1.finish_timer()

@@ -11,7 +11,7 @@ class Timer:
             print("You currently still have a task")
             return
         while preference != "pomodoro" and preference != "custom":
-            preference = input("Please type either 'pomodoro' or 'custom'")
+            preference = input("Please type either 'pomodoro' or 'custom' ")
 
         #Right now the timer is in seconds instead of minutes(I did that for testing)
         #When we implement it we can just multiple the number by 60 to turn it into minutes
@@ -20,8 +20,8 @@ class Timer:
             self.timer_break = 5.0
 
         if preference == "custom":
-            self.timer_work = float(input("How long would you like to work for?"))
-            self.timer_break = float(input("How long would you like to take a break for?"))
+            self.timer_work = float(input("How long would you like to work for? "))
+            self.timer_break = float(input("How long would you like to take a break for? "))
 
         self.timer_complete = False
 
