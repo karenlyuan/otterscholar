@@ -4,10 +4,12 @@ class Timer:
     def __init__(self):
         self.timer_work = 0.0
         self.timer_break = 0.0
-        self.timer_complete = False
-        self.attempts = 0
+        self.timer_complete = True
 
     def set_timer(self, preference):
+        if (self.timer_complete == False):
+            print("You currently still have a task")
+            return
         while preference != "pomodoro" and preference != "custom":
             preference = input("Please type either 'pomodoro' or 'custom'")
 
@@ -21,6 +23,8 @@ class Timer:
             self.timer_work = float(input("How long would you like to work for?"))
             self.timer_break = float(input("How long would you like to take a break for?"))
 
+        self.timer_complete = False
+
     def start_time(self):
         time.time()
         print("Time to starting working!")
@@ -32,6 +36,3 @@ class Timer:
 
     def finish_timer(self):
         self.timer_complete = True
-
-    def more_attempts(self, num):
-        self.attempts += num
