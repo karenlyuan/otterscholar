@@ -1,6 +1,22 @@
 import datetime
+import random
 
 attempts = 0
+coins = 0
+class Game:
+    def __init__(self):
+        global attempts
+    def rules(self):
+        print("Click the button to get a chance to earn coins. 5'%' chance of 20 coins, 70'%' chance of 5, 25'%' chance of 3")
+    def roll(self):
+        num = random.random()*100
+        if (num > 0 and num < 5):
+            coins = coins+20
+        elif(nums >= 5 and nums < 75):
+            coins = coins+5
+        else:
+            coins = coins+3
+
 class Task:
     def __init__(self, time, task_des):
         self.time = time
@@ -21,7 +37,7 @@ class TaskList:
     def mark_task_done(self, task_des):
         del self.task_dict[task_des]
         global attempts
-        attempts = attempts+10
+        attempts = attempts+1
 
     def print_tasks(self):
         if self.task_dict:
@@ -56,4 +72,4 @@ if task_2:
 else:
     print("Task 'Do another thing' not found")
 
-print(attempts)
+print(coins)
