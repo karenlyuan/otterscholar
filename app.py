@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for
 from flask import request, jsonify
 from flask_cors import CORS
+from playsound import playsound
 
 from timer import Timer
 from tasklist import Game1, Task, TaskList
@@ -28,6 +29,10 @@ def custom_timer():
 
 def button_clicked():
     pass
+
+def play_jazz():
+    playsound('/music/jazzcomedy.mp3')
+    print('playing sound using  playsound')
 
 @app.route('/start_custom')
 def start_custom():
