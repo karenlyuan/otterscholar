@@ -1,9 +1,21 @@
+from tkinter import *
+from tkinter import messagebox
 import random
 
+# root = Tk()
+# root.title("Tic-Tac-Toe")
+# root.geometry("400x450")
 
 board = {1: " ", 2: " ", 3: " ",
          4: " ", 5: " ", 6: " ",
          7: " ", 8: " ", 9: " "}
+
+# # button clicked function
+# def bclick(b):
+#     pass
+
+# # buttons on board
+# b1 = Button(root, text = " ", font = ("Helvetica", 15), height = 3, width = 6, bg = "SystemButtonFace", command = Lambda: b_click(b1))
 
 def printBoard(board):
     print('-' * 12)
@@ -131,6 +143,6 @@ while not checkForWin():
     playerMove()
     botMove()
 
-
+# root.mainloop()
 
 
