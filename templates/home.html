@@ -124,9 +124,9 @@
                 var pythonScriptPath = "playSoft.py";
                 subprocess.run(["python", pythonScriptPath]);
             }
-            //function startCustom() {
-            //  var url = "{{ url_for('/start_custom') }}";
-            //}
+            function startCustom() {
+                var url = "{{ url_for('start_custom') }}";
+            }
             let timerValue = 0;
             let timerInterval;
 
@@ -152,20 +152,27 @@
                 }, 1000);
             }
 
-            function startPomodoroTime() {
+            function startPomodoroTimer() {
                 fetch("{{ url_for('start_pomodoro') }}")
                     .then(response => response.json())
                     .then(data => {
                         console.log(data);
-                        timerValue = 25 * 60; // 25 minutes in seconds
+                        timerValue = 5; // 25 minutes in seconds
                         startTimer(timerValue);
                     })
                     .catch(error => console.error('Error:', error));
             }
+
+            function startCustomTimer() {
+                fetch("{{ url_for('start_custom') }}")
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+                    .catch(error => console.error('Error:', error));
+            }
         </script>
 
-        <button id="button_pomodoro" onclick="startPomodoro()">Start Pomodoro</button>
-        <button id="button_timer" onclick="runPythonScript()">Custom Timer</button>
+        <button id="button_pomodoro" onclick="startPomodoroTimer()">Start Pomodoro</button>
+        <button id="button_custom" onclick="startCustomTimer()">Start Custom Timer</button>
         <button id="button_music" onclick="runPythonScript()">Select Music</button>
         
         <button id="button_jazz" onclick="jazz_music()">Play Jazz</button>
