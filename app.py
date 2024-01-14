@@ -17,12 +17,12 @@ def start_pomodoro():
     t.start_timer()
     t.finish_timer()
     return {'result': 'Pomodoro started successfully'}
-'''
+
 @app.route('/start_custom')
 def start_custom():
     t = Timer()
     t.set_custom_timer()
-'''
+
     
 if __name__ == '__main__':
     app.run(debug=True)
