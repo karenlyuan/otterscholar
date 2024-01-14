@@ -14,7 +14,7 @@ def index():
 def start_pomodoro():
     t = Timer()
     t.set_timer("pomodero")
-    t.start_time()
+    t.start_timer()
     t.finish_timer()
     return {'result': 'Pomodoro started successfully'}
 
