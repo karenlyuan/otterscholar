@@ -19,7 +19,18 @@ def start_pomodoro():
     t.set_pomodoro_timer()
     t.start_timer()
     t.finish_timer()
-    return jsonify({'timer_value': 25 * 60, 'status': 'Pomodoro started successfully'})
+    return {'result': 'Pomodoro started successfully'}
 
+def custom_timer():
+    # Handle custom timer logic here
+    return jsonify({'result': 'Custom timer logic executed successfully'})
+
+def button_clicked():
+    pass
+
+@app.route('/start_custom')
+def start_custom():
+    print("custom works")
+    
 if __name__ == '__main__':
     app.run(debug=True)

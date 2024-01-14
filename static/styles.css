@@ -33,34 +33,29 @@ button:hover {
     top: 144px;
 }
 
-#button_timer {
-    left: 636px;
-    top: 143px;
+#button_TTT {
+    left: 700px;
+    top: 144px;
 }
 
 #button_music {
-    left: 57px;
+    left: 59px;
     top: 612px;
 }
 
 #button_jazz {
     left: 59px;
-    top: 733px;
+    top: 692px;
 }
 
 #button_piano{
     left: 59px;
-    top: 854px;
+    top: 772px;
 }
 
 #button_relaxing {
     left: 59px;
-    top: 975px;
-}
-
-#button_soft {
-    left: 59px;
-    top: 1096px;
+    top: 852px;
 }
 
 #button_finish {
@@ -88,4 +83,15 @@ button:hover {
     top: 154px;
     font-size: 16px;
 
+}
+
+#button_shop {
+    width: 232px;
+    height: 23px;
+    left: 60px;
+    top: 91px;
+    color: #0A014F;
+    font-size: 15px;
+    font-weight: 700;
+    word-wrap: break-word
 }
