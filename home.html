@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div>    
+    <div>
 
         <div style="width: 475px; height: 784px; left: 974px; top: 101px; position: absolute; background: #FFF9FA; border-top-left-radius: 30px; border-top-right-radius: 30px"></div>
         <div style="width: 232px; height: 23px; left: 60px; top: 91px; position: absolute; color: #0A014F; font-size: 15px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Coins: 0                  <br/>Attempts left: 0</div>
@@ -19,10 +19,6 @@
         <div style="left: 626px; top: 55px; position: absolute; color: black; font-size: 30px; font-family: Galindo; font-weight: 400; word-wrap: break-word">OTTER SCHOLAR</div>
         <div style="padding: 10px; left: 1064px; top: 307px; position: absolute; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
             <div style="color: black; font-size: 25px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">Example Task</div>
-        </div>
-        <div style="width: 133px; height: 62px; left: 134px; top: 154px; position: absolute">
-            <div style="width: 133px; height: 62px; left: 0px; top: 0px; position: absolute; background: #0A014F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-            <div style="left: 16px; top: 19px; position: absolute; color: #FAF7F7; font-size: 18px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Leaderboard</div>
         </div>
         <div style="width: 47px; height: 45px; left: 1009px; top: 219px; position: absolute">
             <div style="width: 47px; height: 45px; left: 0px; top: 0px; position: absolute; background: #0A014F; border-radius: 9999px"></div>
@@ -39,10 +35,6 @@
             </div>
         </div>
         <div style="width: 331px; height: 38px; left: 1074px; top: 216px; position: absolute; background: rgba(217, 217, 217, 0); border-bottom: 1px black solid"></div>
-        <div style="width: 239.38px; height: 64.32px; left: 1091.81px; top: 791.53px; position: absolute">
-            <div style="width: 239.38px; height: 64.32px; left: 0px; top: 0px; position: absolute; background: #0A014F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
-            <div style="left: 32.19px; top: 21.47px; position: absolute; color: #FAF7F7; font-size: 18px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">View Completed Tasks</div>
-        </div>
         <div style="width: 543px; height: 234px; left: 352px; top: 239px; position: absolute; background: rgba(255, 248.70, 249.75, 0.55); border-radius: 50px"></div>
         <div style="width: 543px; height: 396px; left: 352px; top: 493px; position: absolute; background: rgba(255, 248.70, 249.75, 0.55); border-radius: 50px"></div>
         <img style="width: 140px; height: 155px; left: 92px; top: 435px; position: absolute" src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-otter-clipart-cute-otter-with-flowers-vector-illustration-cartoon-png-image_6815829.png" />
@@ -85,8 +77,6 @@
                 var options = {weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric'};
                 var formattedDate = now.toLocaleString('en-US', options);
         
-                formattedDate = formattedDate.replace("at", "");
-
                 // Insert formatted date into HTML
                 document.getElementById("datetime").innerHTML = formattedDate;
         
@@ -114,6 +104,8 @@
         <button id="button_mini_game" onclick="runPythonScript()">Mini Games</button>
         <button id="button_finish" onclick="runPythonScript()">Finish</button>
         <button id="button_task" onclick="runPythonScript()">Example Task</button>
+        <button id="button_completed_tasks" onclick="runPythonScript()">View Completed Tasks</button>
+        <button id="button_leaderboard" onclick="runPythonScript()">Leaderboard</button>
     
     </div>
 

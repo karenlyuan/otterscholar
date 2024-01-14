@@ -57,3 +57,20 @@ button:hover {
     left: 59px;
     top: 243px;
 }
+
+#button_completed_tasks {
+    width: 239.38px;
+    height: 64.32px;
+    left: 1091.81px;
+    top: 791.53px;
+    font-size: 18px;
+}
+
+#button_leaderboard {
+    width: 133px;
+    height: 62px;
+    left: 134px;
+    top: 154px;
+    font-size: 16px;
+
+}
