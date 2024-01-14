@@ -163,16 +163,14 @@
                     .catch(error => console.error('Error:', error));
             }
 
-            function startCustomTimer() {
-                fetch("{{ url_for('start_custom') }}")
-                    .then(response => response.json())
-                    .then(data => console.log(data))
-                    .catch(error => console.error('Error:', error));
+            function startTTT() {
+                <form action="/button_clicked" method="get">
+                <button type="submit">Click me</button>
             }
         </script>
 
         <button id="button_pomodoro" onclick="startPomodoroTimer()">Start Pomodoro</button>
-        <button id="button_custom" onclick="startCustomTimer()">Start Custom Timer</button>
+        <button id="button_TTT" onclick="startTTT()">Tic-Tac-Toe</button>
         <button id="button_music" onclick="runPythonScript()">Select Music</button>
         
         <button id="button_jazz" onclick="jazz_music()">Play Jazz</button>

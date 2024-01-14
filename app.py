@@ -23,6 +23,9 @@ def custom_timer():
     # Handle custom timer logic here
     return jsonify({'result': 'Custom timer logic executed successfully'})
 
+def button_clicked():
+    pass
+
 @app.route('/start_custom')
 def start_custom():
     print("custom works")
