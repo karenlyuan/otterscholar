@@ -3,7 +3,7 @@ from tasklist import Game1, Task, TaskList
 import pygame
 import time
 
-file_path = "softvibes.mp3"
+file_path = "music/softvibes.mp3"
 pygame.init()
 pygame.mixer.music.load(file_path)
 pygame.mixer.music.play()
