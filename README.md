@@ -9,4 +9,4 @@ We are four UCSB undergraduates studying computer science and have developed thi
 ### Technologies
 Our project uses the languages Python, HTML and CSS. We used Figma to design a wireframe and VSCode to program the app. Our libraries used include datetime, random, time, playsound and pygame. We also used the Flask framework to develop our web application with Python.
 
-Check out our [Figma UI design](https://www.figma.com/file/uqj9ooB21Xvg7p83S0IiRd/SB-Hacks-X?type=design&node-id=0%3A1&mode=design&t=O64u9QJ9B3zHMIFE-1)
+Check out our [Figma UI design](https://www.figma.com/file/uqj9ooB21Xvg7p83S0IiRd/SB-Hacks-X?type=design&node-id=0%3A1&mode=design&t=O64u9QJ9B3zHMIFE-1).
