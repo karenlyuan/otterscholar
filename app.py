@@ -15,6 +15,7 @@ def index():
 
 @app.route('/start_pomodoro')
 def start_pomodoro():
+    print("pomodoro started")
     t = Timer()
     t.set_pomodoro_timer()
     t.start_timer()
