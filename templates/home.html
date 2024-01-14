@@ -107,6 +107,9 @@
                     .then(data => console.log(data))
                     .catch(error => console.error('Error:', error));
             }
+            function startCustom() {
+                var url = "{{ url_for('/start_custom') }}";
+            }
 
         </script>
 
