@@ -11,10 +11,10 @@
     <style>
         .countdown {
             display: none;
-            font-size: 60px;
+            font-size: 80px;
             position: absolute;
-            left: 450px;
-            top: 250px;
+            left: 500px;
+            top: 310px;
         }
 
         .spacer {
@@ -28,11 +28,8 @@
     <div>
         <p id="timer" style="position: fixed; bottom: 50px; right: 50px;"></p>
         <div style="width: 475px; height: 784px; left: 974px; top: 101px; position: absolute; background: #FFF9FA; border-top-left-radius: 30px; border-top-right-radius: 30px"></div>
-        
-        
-        <div style="width: 232px; height: 23px; left: 60px; top: 91px; position: absolute; color: #0A014F; font-size: 15px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Coins: 0             <br/>Attempts left: 0</div>
-        
-        
+        <div style="width: 232px; height: 23px; left: 60px; top: 91px; position: absolute; color: #0A014F; font-size: 15px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Coins: 0
+            <br />Attempts left: 0</div>
         <div style="width: 475px; height: 79px; left: 974px; top: 90px; position: absolute; background: #8C1C13; border-top-left-radius: 30px; border-top-right-radius: 30px"></div>
         <div style="width: 288px; height: 47px; left: 1068px; top: 111px; position: absolute; text-align: center; color: #FAF7F7; font-size: 30px; font-family: Galindo; font-weight: 400; word-wrap: break-word">TODAY’S TASKS</div>
         <div style="left: 626px; top: 55px; position: absolute; color: black; font-size: 30px; font-family: Galindo; font-weight: 400; word-wrap: break-word">OTTER SCHOLAR</div>
@@ -55,17 +52,13 @@
         </div>
         <div style="width: 331px; height: 38px; left: 1074px; top: 216px; position: absolute; background: rgba(217, 217, 217, 0); border-bottom: 1px black solid"></div>
         <div style="width: 543px; height: 234px; left: 352px; top: 239px; position: absolute; background: rgba(255, 248.70, 249.75, 0.55); border-radius: 50px"></div>
-
-        <img style="width: 543px; height: 396px; left: 352px; top: 493px; position: absolute; opacity: 0.5;" src="https://t3.ftcdn.net/jpg/06/30/69/56/360_F_630695689_QzI3cOb8I03c7pz1exnPTnJy5dlZdlTF.jpg"/>
-
+        <div style="width: 543px; height: 396px; left: 352px; top: 493px; position: absolute; background: rgba(255, 248.70, 249.75, 0.55); border-radius: 50px"></div>
         <img style="width: 140px; height: 155px; left: 92px; top: 435px; position: absolute" src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-otter-clipart-cute-otter-with-flowers-vector-illustration-cartoon-png-image_6815829.png" />
-        <!-- <div style="width: 64px; height: 63px; left: 60px; top: 153px; position: absolute">
+        <div style="width: 64px; height: 63px; left: 60px; top: 153px; position: absolute">
             <div style="width: 64px; height: 63px; left: 0px; top: 0px; position: absolute; background: #0A014F; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 30px"></div>
             <div style="width: 33px; height: 32px; left: 16px; top: 15px; position: absolute">
                 <div style="width: 27.07px; height: 24px; left: 2.97px; top: 4px; position: absolute">
-                    <div style="width: 24.75px; height: 14.67px; left: 1.16px; top: 9
-
-.33px; position: absolute; border: 1.50px #F8F8F8 solid"></div>
+                    <div style="width: 24.75px; height: 14.67px; left: 1.16px; top: 9.33px; position: absolute; border: 1.50px #F8F8F8 solid"></div>
                     <div style="width: 8.25px; height: 10.67px; left: 9.18px; top: 13.33px; position: absolute; border: 1.50px #F8F8F8 solid"></div>
                     <div style="width: 8.72px; height: 9.61px; left: 18.35px; top: 0px; position: absolute; border: 1.50px #F8F8F8 solid"></div>
                     <div style="width: 10.92px; height: 9.79px; left: 8.07px; top: 0px; position: absolute; border: 1.50px #F8F8F8 solid"></div>
@@ -91,35 +84,32 @@
             <div style="width: 67.69px; height: 118.39px; left: 33.75px; top: 14.56px; position: absolute; background: rgba(51, 51, 51, 0.70)"></div>
         </div>
 
-        <div class="countdown" style="display: none; font-size: 90px; position: absolute; left: 500px; top: 320px;">
+        <div class="countdown">
             <div class="time">
                 <span class="number" id="minutes"></span>
-                <span class="spacer"></span>
-                <span class="separator">:</span>
-                <span class="spacer"></span>
+                <span class="seperator">:</span>
             </div>
             <div class="time">
                 <span class="number" id="seconds"></span>
             </div>
-        </div> 
+        </div>
         
         <p id="datetime" style="left: 29px; top: 928px; position: absolute; color: black; font-size: 30px; font-family: Galindo; font-weight: 400; word-wrap: break-word"></p>
-
+        
         <script>
             // Set the countdown time in minutes
             var countdownMinutes = 25;
-       
+        
             // Calculate the end time
             var now = new Date();
             var endTime = new Date(now.getTime() + countdownMinutes * 60 * 1000).getTime();
-       
+        
             // Update the countdown every second
             var countdownElement = document.getElementById("timer");
             var countdownInterval = setInterval(function () {
                 var currentTime = new Date().getTime();
                 var timeRemaining = endTime - currentTime;
- 
- 
+
                 if (timeRemaining <= 0) {
                     clearInterval(countdownInterval);
                     countdownElement.innerHTML = "Time's up!";
@@ -127,56 +117,33 @@
                     var hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                     var minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
                     var seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
- 
- 
+
                     document.getElementById("minutes").innerHTML = minutes;
                     document.getElementById("seconds").innerHTML = seconds;
                 }
             }, 1000);
         
             // Modify the startPomodoroTimer function to start the timer and update the <p> element
-                function startPomodoroTimer() {
-                    document.querySelector(".countdown").style.display = "flex";
-                    fetch("{{ url_for('start_pomodoro') }}")
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error(`HTTP error! Status: ${response.status}`);
-                            }
-                            return response.json();
-                        })
-                        .then(data => {
-                            console.log(data);
-                            timerValue = 25 * 60; // 25 minutes in seconds
-                            startTimer(timerValue);
-                        })
-                        .catch(error => console.error('Error:', error.message));
-                }
-
-        //    function openShop() {
-          //      var pythonScriptPath = "openShop.py";
-            //    subprocess.run(["python", pythonScriptPath]);
-           // }
-
-          //  function startTTT() {
-                //<form action="/button_clicked" method="get">
-            //    <button type="submit">Click me</button>
-            //}
+            function startPomodoroTimer() {
+                document.querySelector(".countdown").style.display = "flex";
+                fetch("{{ url_for('start_pomodoro') }}")
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                        timerValue = 25 * 60; // 25 minutes in seconds
+                        startTimer(timerValue);
+                    })
+                    .catch(error => console.error('Error:', error.message));
+            }
         </script>
         <button id="button_pomodoro" onclick="startPomodoroTimer()">Start Pomodoro</button>
-        <button id="button_TTT" onclick="startTTT()">Tic-Tac-Toe</button>
-        <button id="button_music" onclick="soft_music()">Play Soft Vibes</button>
-        
+        <button id="button_music" onclick="runPythonScript()">Select Music</button>
+
         <button id="button_jazz" onclick="jazz_music()">Play Jazz</button>
         <button id="button_piano" onclick="piano_music()">Play Piano</button>
-        <button id="button_relaxing" onclick="relaxing_music()">Play Relaxing</button>
-        
-        <button id="button_finish" onclick="runPythonScript()">Finish</button>
-        <button id="button_task" onclick="runPythonScript()">Example Task</button>
-        <button id="button_completed_tasks" onclick="runPythonScript()">View Completed Tasks</button>
-        <button id="button_shop" onclick="openShop()">Shop</button>
-
-    
-    </div>
-
-</body>
-</html>
+        <button id="button_relaxing" onclick="relaxing_music()">Play Relaxing</button
