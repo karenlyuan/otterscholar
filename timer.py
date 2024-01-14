@@ -15,14 +15,6 @@ class Timer:
         self.timer_break = 5.0*60
         self.timer_complete = False
 
-    def set_custom_timer(self, work_duration, break_duration):
-        if not self.timer_complete:
-            print("You currently still have a task")
-            return
-
-        self.timer_work = work_duration
-        self.timer_break = break_duration
-        self.timer_complete = False
 
     def start_timer(self):
         time.time()
@@ -32,6 +24,9 @@ class Timer:
         print("Time for your break! Good job, you earned it!")
         time.sleep(self.timer_break)
         time.time()
+
+        # Return the remaining time after the Pomodoro
+        return self.timer_break
 
     def finish_timer(self):
         self.timer_complete = True
