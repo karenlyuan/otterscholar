@@ -92,14 +92,20 @@
         </script>
 
         <script>
-            function runPythonScript() {
-                var pythonScriptPath = "main.py";
+            function runPomodoro() {
+                var pythonScriptPath = "pomodoroRunner.py";
+                subprocess.run(["python", pythonScriptPath]);
+            }
+            function runCustom() {
+                var pythonScriptPath = "customRunner.py";
                 subprocess.run(["python", pythonScriptPath]);
             }
         </script>
 
-        <button id="button_pomodoro" onclick="runPythonScript()">Pomodoro</button>
-        <button id="button_timer" onclick="runPythonScript()">Custom Timer</button>
+        <button id="button_pomodoro" onclick="runPomodoro()">Pomodoro</button>
+        <button id="button_timer" onclick="runCustom()">Custom Timer</button>
+
+
         <button id="button_music" onclick="runPythonScript()">Select Music</button>
         <button id="button_mini_game" onclick="runPythonScript()">Mini Games</button>
         <button id="button_finish" onclick="runPythonScript()">Finish</button>

@@ -25,7 +25,7 @@ class Timer:
 
         self.timer_complete = False
 
-    def start_time(self):
+    def start_timer(self):
         time.time()
         print("Time to starting working!")
         time.sleep(self.timer_work)
