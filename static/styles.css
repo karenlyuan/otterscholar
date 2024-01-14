@@ -43,9 +43,24 @@ button:hover {
     top: 612px;
 }
 
-#button_mini_game {
+#button_jazz {
     left: 59px;
     top: 733px;
+}
+
+#button_piano{
+    left: 59px;
+    top: 854px;
+}
+
+#button_relaxing {
+    left: 59px;
+    top: 975px;
+}
+
+#button_soft {
+    left: 59px;
+    top: 1096px;
 }
 
 #button_finish {

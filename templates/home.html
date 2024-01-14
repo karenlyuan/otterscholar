@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Webpage Title</title>
+    <title>Otter Scholar</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
@@ -107,13 +108,34 @@
                     .then(data => console.log(data))
                     .catch(error => console.error('Error:', error));
             }
+            function jazz_music() {
+                var pythonScriptPath = "playJazz.py";
+                subprocess.run(["python", pythonScriptPath]);
+            }
+            function piano_music() {
+                var pythonScriptPath = "playPiano.py";
+                subprocess.run(["python", pythonScriptPath]);
+            }
+            function relaxing_music() {
+                var pythonScriptPath = "playRelaxing.py";
+                subprocess.run(["python", pythonScriptPath]);
+            }
+            function soft_music() {
+                var pythonScriptPath = "playSoft.py";
+                subprocess.run(["python", pythonScriptPath]);
+            }
 
         </script>
 
         <button id="button_pomodoro" onclick="startPomodoro()">Start Pomodoro</button>
-        <button id="button_timer" onclick="runPythonScript()">Custom Timer</button>
+        <button id="button_timer" onclick="runPythonScript()">Mini Games</button>
         <button id="button_music" onclick="runPythonScript()">Select Music</button>
-        <button id="button_mini_game" onclick="runPythonScript()">Mini Games</button>
+        
+        <button id="button_jazz" onclick="jazz_music()">Play Jazz</button>
+        <button id="button_piano" onclick="piano_music()">Play Piano</button>
+        <button id="button_relaxing" onclick="relaxing_music()">Play Relaxing</button>
+        <button id="button_soft" onclick="soft_music()">Play Soft Vibes</button>
+        
         <button id="button_finish" onclick="runPythonScript()">Finish</button>
         <button id="button_task" onclick="runPythonScript()">Example Task</button>
         <button id="button_completed_tasks" onclick="runPythonScript()">View Completed Tasks</button>
