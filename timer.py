@@ -11,8 +11,8 @@ class Timer:
             print("You currently still have a task")
             return
 
-        self.timer_work = 25.0
-        self.timer_break = 5.0
+        self.timer_work = 25*60
+        self.timer_break = 5.0*60
         self.timer_complete = False
 
     def set_custom_timer(self, work_duration, break_duration):

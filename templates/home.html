@@ -115,9 +115,9 @@
                 var pythonScriptPath = "playSoft.py";
                 subprocess.run(["python", pythonScriptPath]);
             }
-            //function startCustom() {
-            //  var url = "{{ url_for('/start_custom') }}";
-            //}
+            function startCustom() {
+                var url = "{{ url_for('start_custom') }}";
+            }
             let timerValue = 0;
             let timerInterval;
 
@@ -143,12 +143,12 @@
                 }, 1000);
             }
 
-            function startPomodoroTime() {
+            function startPomodoroTimer() {
                 fetch("{{ url_for('start_pomodoro') }}")
                     .then(response => response.json())
                     .then(data => {
                         console.log(data);
-                        timerValue = 25 * 60; // 25 minutes in seconds
+                        timerValue = 5; // 25 minutes in seconds
                         startTimer(timerValue);
                     })
                     .catch(error => console.error('Error:', error));
@@ -157,16 +157,20 @@
                 var pythonScriptPath = "openShop.py";
                 subprocess.run(["python", pythonScriptPath]);
             }
+
+            function startTTT() {
+                <form action="/button_clicked" method="get">
+                <button type="submit">Click me</button>
+            }
         </script>
 
-        <button id="button_pomodoro" onclick="startPomodoro()">Start Pomodoro</button>
-        <button id="button_timer" onclick="runPythonScript()">Custom Timer</button>
-        <button id="button_music" onclick="runPythonScript()">Select Music</button>
+        <button id="button_pomodoro" onclick="startPomodoroTimer()">Start Pomodoro</button>
+        <button id="button_TTT" onclick="startTTT()">Tic-Tac-Toe</button>
+        <button id="button_music" onclick="soft_music()">Play Soft Vibes</button>
         
         <button id="button_jazz" onclick="jazz_music()">Play Jazz</button>
         <button id="button_piano" onclick="piano_music()">Play Piano</button>
         <button id="button_relaxing" onclick="relaxing_music()">Play Relaxing</button>
-        <button id="button_soft" onclick="soft_music()">Play Soft Vibes</button>
         
         <button id="button_finish" onclick="runPythonScript()">Finish</button>
         <button id="button_task" onclick="runPythonScript()">Example Task</button>
