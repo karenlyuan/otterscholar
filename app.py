@@ -30,10 +30,6 @@ def custom_timer():
 def button_clicked():
     pass
 
-def play_jazz():
-    playsound('/music/jazzcomedy.mp3')
-    print('playing sound using  playsound')
-
 @app.route('/start_custom')
 def start_custom():
     print("custom works")

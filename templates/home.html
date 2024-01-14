@@ -32,6 +32,21 @@
     <p id="timer" style="position: fixed; bottom: 50px; right: 50px;"></p>
    <div>
 
+        <audio id="jazzMusic" loop>
+            <source src="{{ url_for('static', filename='jazzcomedy.mp3') }}" type="audio/mp3">
+        </audio>
+
+        <audio id="pianoMusic" loop>
+            <source src="{{ url_for('static', filename='pianomoment.mp3') }}" type="audio/mp3">
+        </audio>
+
+        <audio id="relaxingMusic" loop>
+            <source src="{{ url_for('static', filename='relaxing.mp3') }}" type="audio/mp3">
+        </audio>
+
+        <audio id="softMusic" loop>
+            <source src="{{ url_for('static', filename='softvibes.mp3') }}" type="audio/mp3">
+        </audio>
 
        <div style="width: 475px; height: 784px; left: 974px; top: 101px; position: absolute; background: #FFF9FA; border-top-left-radius: 30px; border-top-right-radius: 30px"></div>
       
@@ -179,7 +194,7 @@
                    .catch(error => console.error('Error:', error));
            }
            function jazz_music() {
-               var pythonScriptPath = "playJazz.py";
+            var pythonScriptPath = "playJazz.py";
                subprocess.run(["python", pythonScriptPath]);
            }
            function piano_music() {
@@ -210,16 +225,47 @@
           //     //<form action="/button_clicked" method="get">
             //   <button type="submit">Click me</button>
           // }
+
+        var jazzMusic = document.getElementById("jazzMusic");
+
+        function playJazzMusic() {
+            jazzMusic.play();
+        }
+
+        var pianoMusic = document.getElementById("pianoMusic");
+
+        function playPianoMusic() {
+            pianoMusic.play();
+        }
+
+        var jazzMusic = document.getElementById("jazzMusic");
+
+        function playJazzMusic() {
+            jazzMusic.play();
+        }
+
+        var softMusic = document.getElementById("softMusic");
+
+        function playSoftMusic() {
+            softMusic.play();
+        }
+
+        var relaxingMusic = document.getElementById("relaxingMusic");
+
+        function playRelaxingMusic() {
+            relaxingMusic.play();
+        }
+            
        </script>
 
 
         <button id="button_pomodoro" onclick="startPomodoroTimer()">Start Pomodoro</button>
        <button id="button_TTT" onclick="startTTT()">Tic-Tac-Toe</button>
-       <button id="button_music" onclick="soft_music()">Play Soft Vibes</button>
+       <button id="button_music" onclick="playSoftMusic()">Play Soft Vibes</button>
       
-       <button id="button_jazz" onclick="jazz_music()">Play Jazz</button>
-       <button id="button_piano" onclick="piano_music()">Play Piano</button>
-       <button id="button_relaxing" onclick="relaxing_music()">Play Relaxing</button>
+       <button id="button_jazz" onclick="playJazzMusic()">Play Jazz</button>
+       <button id="button_piano" onclick="playPianoMusic()">Play Piano</button>
+       <button id="button_relaxing" onclick="playRelaxingMusic()">Play Relaxing</button>
       
        <button id="button_finish" onclick="runPythonScript()">Finish</button>
        <button id="button_task" onclick="runPythonScript()">Example Task</button>
